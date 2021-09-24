@@ -1,0 +1,250 @@
+/*
+a. Chenghai Cao
+b. Chenghai_cao@student.uml.edu
+c. Chenghai Cao is learning in Umass Lowell undergrad student, Computer Science Major, this is Chenghai Cao's homework 8 in 91.61 GUI Programming I as a student.
+d. Aug/11/2020
+e. This webpage is mainly implementing a Bit of Scrabble with Drag-and-Drop.
+
+Copyright (c) 2020 by Chenghai Cao. All rights reserved.
+*/
+
+
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+    background: url("../img/bg.jpg");
+    width:100%;
+    height:100%;
+    background-size:100% 120%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 25px;
+  text-align: center;
+  color: lightblue;
+}
+
+h2{
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  color: pink;
+}
+
+h3{
+  text-align: center;
+  color: lightpink;
+  font-size: 20px;
+}
+.menu
+{
+    background:#404040; 
+    margin-top: 70px;
+    box-shadow: 0px 2px 16px grey;
+}
+*{  
+  margin: 0px;  
+  padding: 0px;  
+}  
+video{  
+   position: fixed;  
+   right: 0px;  
+   bottom: 0px;  
+   min-width: 100%;  
+   min-height: 100%;  
+   height: auto;  
+   width: auto;  
+   z-index:-11
+}  
+source{  
+    min-width: 100%;  
+    min-height: 100%;  
+    height: auto;  
+    width: auto;  
+} 
+.nav {
+  width: 970px;
+  float: left;
+  padding: 0;
+  height:70px;
+  display:flex;
+
+}
+.nav select{
+  margin-left: 15px;
+  height:30px;
+  width: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav input{
+  margin-left: 0px;
+  height:30px;
+  width: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav a {
+    margin-left: 60px;
+    width:140px;
+    line-height:70px;
+    text-decoration: none;
+    font-size:25px;
+    color: #FFFFFF;
+
+}
+
+.nav a:link{
+  color: white;
+  text-decoration: none;
+}
+
+.wrap {
+  background: rgba(62 62 67 / 50%);
+  width: 950px;
+  height: 850px;
+  box-shadow: 0px 2px 16px grey;
+  padding: 10px;
+  margin-top: 60px;
+}
+
+.score-result {
+  font-size: 17px;
+  width: 800px;
+  margin: 50px auto 10px auto;
+  padding-bottom: 5px;
+  border-bottom: 3px solid white;
+}
+
+.score-result div {
+  display: inline-block;
+  color: white;
+}
+
+.score-result > div > div:nth-child(2) {
+  width: 100px;
+}
+
+.instruction {
+  font-size: 18px;
+  text-align: center;
+  color:white;
+}
+
+.instructionIcon {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  background: url('../img/checkIcon.png');
+  background-size: 15px 15px;
+  border: none;
+  margin-left: 10px;
+}
+
+.instructionIcon:disabled {
+  filter: grayscale(100%);
+  opacity: 0.2;
+}
+
+.buttonBox {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.buttonBox button {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.buttonBox button:disabled {
+  color: #e9e9e9;
+  cursor: default;
+}
+
+#letterRack {
+  width: 620px;
+  height: 144px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-image: url(../img/scrabble/rack.png);
+  opacity: 0.9;
+}
+
+.letterTile {
+  top: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+#board {
+  display: flex;
+  flex-direction: row;
+  height: 91px;
+  width: 595px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.boardSlot {
+  display: inline-block;
+  background-image: url(../img/scrabble/Scrabble_BlankSquare_81x87.jpg);
+  width: 81px;
+  height: 87px;
+  margin: 1px;
+  border: solid 1px black;
+}
+
+.boardSlot .letterTile {
+  border-radius: 4px;
+  position: relative;
+  width: 75px;
+  top: 2px;
+  left: 3px;
+  height: 81px;
+  z-index: 20;
+}
+
+.boardSlot:nth-child(2) {
+  background-image: url(../img/scrabble/Scrabble_DoubleWordScore_81x87.jpg);
+}
+
+.boardSlot:nth-child(6) {
+  background-image: url(../img/scrabble/Scrabble_DoubleWordScore_81x87.jpg);
+}
+
+footer{
+  text-align: center;
+  font-size: 10px;
+  margin-top: 30px;
+}
+

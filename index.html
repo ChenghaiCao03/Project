@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+a. Chenghai Cao
+b. Chenghai_cao@student.uml.edu
+c. Chenghai Cao is learning in Umass Lowell undergrad student, Computer Science Major.
+d. Aug/11/2020
+
+Copyright (c) 2020 by Chenghai Cao. All rights reserved.
+-->
+
+<html>
+  <head>
+    <title>Scrabble</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="js/scrabble.js"></script>
+    
+  </head>
+  <body>
+    <video id="v1" autoplay loop muted>
+              <source src="./video.mp4" type="video/mp4"  />
+    </video>    
+    <div class="wrap">
+        
+        <br/>
+        <h2>Let's Do Scrabble!</h2>
+        <div class="score-result">
+            <div>
+                <label>Word:</label>
+                <div id="word"></div>
+            </div>
+            <div>
+                <label>Score:</label>
+                <div id="score"></div>
+            </div>
+            <div>
+                <label>Remaining Tiles:</label>
+                <div id="remainingTiles"></div>
+            </div>
+            <div>
+                <label>Highest Score:</label>
+                <div id="highestScore"></div>
+            </div>
+        </div>
+        <!-- Scrabble board container. Board html will be laid by script. -->
+        <div id="board">
+            <div id="slot_0" class="boardSlot"></div>
+            <div id="slot_1" class="boardSlot"></div>
+            <div id="slot_2" class="boardSlot"></div>
+            <div id="slot_3" class="boardSlot"></div>
+            <div id="slot_4" class="boardSlot"></div>
+            <div id="slot_5" class="boardSlot"></div>
+            <div id="slot_6" class="boardSlot"></div>
+        </div>
+
+        <!-- List of conditions that the word must meet. JavaScript highlights the check (v) icon next to each of them
+    as the user builds a word. -->
+        <h3>Rules</h3>
+        <div class="instruction" >
+            <div>
+                1. Create one word with no gap between letters.<button id="oneWordCheckIcon" class="instructionIcon" disabled></button>
+                <div>
+                    2. The word must contain at least 2 letters.<button id="minLengthIcon" class="instructionIcon" disabled></button>
+                    <div>
+                        3. The word must be found in the dictionary.<button id="dictionaryCheckIcon" class="instructionIcon" disabled></button>
+                    </div>
+
+                    <!-- Control buttons -->
+                    <div class="buttonBox">
+                        <button id="nextBtn" disabled>Next Word</button>
+                        <button id="restartBtn">Start Over</button>
+                    </div>
+
+                    <!-- Rack containing the 7 tiles. The tiles will be placed by script. -->
+                    <div id="letterRack"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+       <span>&copy; copyright 2020 Chenghai Cao</span>
+    </footer>
+  </body>
+</html>
